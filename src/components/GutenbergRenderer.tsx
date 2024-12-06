@@ -8,6 +8,12 @@ interface Block {
     subtitle: string;
     backgroundImage: string;
     ctaText: string;
+    ctaUrl: string;
+    heroImg: {
+      id: number | null;
+      url: string;
+      alt: string;
+    };
   };
 }
 
@@ -20,8 +26,9 @@ const GutenbergRenderer = ({ blocks }: { blocks: Block[] }) => {
             key={index}
             title={block.attributes.title}
             subtitle={block.attributes.subtitle}
-            backgroundImage={block.attributes.backgroundImage}
+            heroImg={block.attributes.heroImg}
             ctaText={block.attributes.ctaText}
+            ctaUrl={block.attributes.ctaUrl}
           />
         );
       // Handle other blocks here
