@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const HeroBlock = ({ title, subtitle, ctaText, ctaUrl, heroImg, anchorId, referenceId }) => {
+const XboxHeroBlock = ({ title, subtitle, ctaText, ctaUrl, heroImg, anchorId, referenceId }) => {
   const computedAnchorId = anchorId || `Hero-block-${referenceId || Date.now()}`;
 
   return (
@@ -43,4 +43,4 @@ const HeroBlock = ({ title, subtitle, ctaText, ctaUrl, heroImg, anchorId, refere
   );
 };
 
-export default HeroBlock;
+export default XboxHeroBlock;
